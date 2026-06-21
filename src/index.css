@@ -1,0 +1,116 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { scroll-behavior: smooth; }
+
+  body {
+    direction: rtl;
+    -webkit-font-smoothing: antialiased;
+    @apply font-vazir bg-white text-gray-900 dark:bg-ink-900 dark:text-ink-50 transition-colors duration-300;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { @apply bg-white dark:bg-ink-900; }
+  ::-webkit-scrollbar-thumb { @apply bg-gray-300 dark:bg-ink-600 rounded-full; }
+  ::-webkit-scrollbar-thumb:hover { @apply bg-accent; }
+}
+
+@layer components {
+  /* ── Layout helpers ─────────────────────────────────────────────────── */
+  /*
+   * .container  → max-width + horizontal padding that never touches screen edges
+   * .section    → vertical rhythm padding
+   * Use them together: <section class="section"><div class="container">…</div></section>
+   */
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1440px;
+    padding-left:  clamp(1rem, 4vw, 3rem);
+    padding-right: clamp(1rem, 4vw, 3rem);
+  }
+
+  .section {
+    padding-top:    clamp(1.5rem, 4vw, 3.5rem);
+    padding-bottom: clamp(1.5rem, 4vw, 3.5rem);
+  }
+
+  /* ── Skeleton loader ── */
+  .skeleton {
+    @apply rounded-xl;
+    background: linear-gradient(90deg,
+      theme('colors.gray.100') 25%,
+      theme('colors.gray.200') 50%,
+      theme('colors.gray.100') 75%
+    );
+    background-size: 400px 100%;
+    animation: shimmer 1.4s infinite;
+  }
+  .dark .skeleton {
+    background: linear-gradient(90deg,
+      theme('colors.ink.700') 25%,
+      theme('colors.ink.600') 50%,
+      theme('colors.ink.700') 75%
+    );
+    background-size: 400px 100%;
+  }
+
+  /* ── Card base ── */
+  .card {
+    @apply bg-white dark:bg-ink-700 border border-gray-200 dark:border-white/[0.07]
+           rounded-xl transition-all duration-200;
+  }
+
+  /* ── Button variants ── */
+  .btn-primary {
+    @apply bg-accent hover:bg-accent-hover text-white font-bold rounded-full
+           px-5 py-2 transition-colors duration-200 cursor-pointer border-none;
+  }
+
+  .btn-ghost {
+    @apply bg-gray-100 hover:bg-gray-200 dark:bg-white/[0.07] dark:hover:bg-white/[0.12]
+           text-gray-700 dark:text-ink-50 border border-gray-200 dark:border-white/10
+           rounded-full px-4 py-2 transition-all duration-200 cursor-pointer text-sm font-medium;
+  }
+
+  /* ── Badge ── */
+  .badge {
+    @apply text-xs font-bold px-3 py-0.5 rounded-full border;
+  }
+
+  /* ── Section title ── */
+  .section-title {
+    @apply font-bebas text-3xl md:text-4xl tracking-widest text-gray-900 dark:text-ink-50
+           flex items-center gap-2;
+  }
+  .section-title::before {
+    content: '';
+    @apply block w-1 rounded-sm bg-accent flex-shrink-0;
+    height: 1.1em;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .bg-manga-grid {
+    background-image: repeating-linear-gradient(
+      0deg, transparent, transparent 40px,
+      rgba(0,0,0,0.04) 40px, rgba(0,0,0,0.04) 41px
+    );
+  }
+  .dark .bg-manga-grid {
+    background-image: repeating-linear-gradient(
+      0deg, transparent, transparent 40px,
+      rgba(255,255,255,0.013) 40px, rgba(255,255,255,0.013) 41px
+    );
+  }
+}
+
+@keyframes shimmer {
+  0%   { background-position: -400px 0; }
+  100% { background-position:  400px 0; }
+}
