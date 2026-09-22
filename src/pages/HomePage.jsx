@@ -47,7 +47,7 @@ export default function HomePage() {
               🗾 دروازه دنیای مانگا
             </span>
 
-            <h1 className="font-bebas tracking-widest leading-none text-balance mb-4
+            <h1 className="font-estedad tracking-widest leading-none text-balance mb-4
                            text-[clamp(3rem,10vw,6rem)]
                            text-gray-900 dark:text-ink-50">
               کشف کن،{' '}

@@ -29,7 +29,7 @@ export default function Navbar({ onAIOpen }) {
         {/* Logo */}
         <Link
           to="/"
-          className="font-bebas text-2xl sm:text-3xl tracking-widest text-accent flex-shrink-0"
+          className="font-estedad text-2xl sm:text-3xl tracking-widest text-accent flex-shrink-0"
         >
           MANGA<span className="text-gray-900 dark:text-ink-50">VERSE</span>
         </Link>

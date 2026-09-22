@@ -8,8 +8,9 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        vazir: ['Vazirmatn', 'sans-serif'],
-        bebas: ['"Bebas Neue"', 'sans-serif'],
+        vazir:   ['Vazirmatn', 'Tahoma', 'Arial', 'sans-serif'],
+        estedad: ['Estedad FD', 'Vazirmatn', 'Tahoma', 'sans-serif'],
+        bebas:   ['"Bebas Neue"', 'sans-serif'],
       },
       colors: {
         ink: {

@@ -41,7 +41,7 @@ export default function AIModal({ onClose }) {
 
         {/* Header */}
         <div className="mb-5 text-right">
-          <h2 className="font-bebas text-3xl tracking-widest text-gray-900 dark:text-ink-50">🤖 جستجوی هوشمند</h2>
+          <h2 className="font-estedad text-3xl tracking-widest text-gray-900 dark:text-ink-50">🤖 جستجوی هوشمند</h2>
           <p className="text-sm text-gray-500 dark:text-ink-400 mt-1 leading-relaxed">
             به جای جستجوی معمولی، بگو دنبال چه <span className="text-accent font-semibold">حسی</span> هستی!
             <br />

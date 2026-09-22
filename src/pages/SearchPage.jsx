@@ -25,7 +25,7 @@ export default function SearchPage() {
       <div className="container">
         {/* Header */}
         <div className="mb-6">
-          <h2 className="font-bebas text-3xl sm:text-4xl tracking-widest text-gray-900 dark:text-ink-50">
+          <h2 className="font-estedad text-3xl sm:text-4xl tracking-widest text-gray-900 dark:text-ink-50">
             نتایج جستجو برای:{' '}
             <span className="text-accent">«{query}»</span>
           </h2>

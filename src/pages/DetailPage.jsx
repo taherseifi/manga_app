@@ -61,7 +61,7 @@ export default function DetailPage() {
 
           {/* Info */}
           <div className="flex-1 min-w-0">
-            <h1 className="font-bebas tracking-widest text-gray-900 dark:text-ink-50 text-[clamp(1.8rem,5vw,3.5rem)] leading-none mb-1">
+            <h1 className="font-estedad tracking-widest text-gray-900 dark:text-ink-50 text-[clamp(1.8rem,5vw,3.5rem)] leading-none mb-1">
               {manga.title}
             </h1>
             {manga.title_japanese && (
@@ -83,7 +83,7 @@ export default function DetailPage() {
                 manga.members  && { val: formatNumber(manga.members),   label: 'عضو' },
               ].filter(Boolean).map(({ val, label, gold }) => (
                 <div key={label} className="text-center">
-                  <p className={`font-bebas text-2xl sm:text-3xl tracking-wider ${gold ? 'text-gold' : 'text-gray-900 dark:text-ink-50'}`}>{val}</p>
+                  <p className={`font-estedad text-2xl sm:text-3xl tracking-wider ${gold ? 'text-gold' : 'text-gray-900 dark:text-ink-50'}`}>{val}</p>
                   <p className="text-[10px] text-gray-500 dark:text-ink-400 uppercase tracking-widest">{label}</p>
                 </div>
               ))}
@@ -104,7 +104,7 @@ export default function DetailPage() {
               {manga.synopsis && (
                 <div className="card p-5">
                   <div className="flex items-center justify-between gap-3 mb-4 flex-wrap">
-                    <h2 className="font-bebas text-xl tracking-widest text-gray-900 dark:text-ink-50">
+                    <h2 className="font-estedad text-xl tracking-widest text-gray-900 dark:text-ink-50">
                       📖 خلاصه داستان
                     </h2>
                     <div className="flex gap-2">
@@ -159,7 +159,7 @@ export default function DetailPage() {
               {/* Characters */}
               {characters?.length > 0 && (
                 <div className="card p-5">
-                  <h2 className="font-bebas text-xl tracking-widest text-gray-900 dark:text-ink-50 mb-4">👥 شخصیت‌ها</h2>
+                  <h2 className="font-estedad text-xl tracking-widest text-gray-900 dark:text-ink-50 mb-4">👥 شخصیت‌ها</h2>
                   <div className="grid grid-cols-3 xs:grid-cols-4 sm:grid-cols-5 md:grid-cols-4 lg:grid-cols-6 gap-3">
                     {characters.map(c => (
                       <div key={c.character.mal_id} className="text-center">
@@ -178,7 +178,7 @@ export default function DetailPage() {
             {/* RIGHT */}
             <div className="md:col-span-1">
               <div className="card p-5">
-                <h2 className="font-bebas text-xl tracking-widest text-gray-900 dark:text-ink-50 mb-4">📋 اطلاعات</h2>
+                <h2 className="font-estedad text-xl tracking-widest text-gray-900 dark:text-ink-50 mb-4">📋 اطلاعات</h2>
                 <ul className="divide-y divide-gray-100 dark:divide-white/[0.05]">
                   {infoRows.map(([key, val]) => (
                     <li key={key} className="flex items-start justify-between gap-3 py-2.5 text-sm">

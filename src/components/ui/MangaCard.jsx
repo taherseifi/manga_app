@@ -18,7 +18,7 @@ export default function MangaCard({ manga, rank }) {
       {/* Rank badge */}
       {rank && (
         <span className="absolute top-2 right-2 z-10
-                         bg-accent text-white text-xs font-bold font-bebas
+                         bg-accent text-white text-xs font-bold font-estedad
                          tracking-wider px-2.5 py-0.5 rounded-full leading-5">
           #{rank}
         </span>

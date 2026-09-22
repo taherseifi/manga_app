@@ -84,7 +84,7 @@
 
   /* ── Section title ── */
   .section-title {
-    @apply font-bebas text-3xl md:text-4xl tracking-widest text-gray-900 dark:text-ink-50
+    @apply font-estedad text-3xl md:text-4xl tracking-widest text-gray-900 dark:text-ink-50
            flex items-center gap-2;
   }
   .section-title::before {
